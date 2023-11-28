@@ -64,7 +64,7 @@ const posts = [
         "media": "https://unsplash.it/600/400?image=24",
         "author": {
             "name": "Luca Formicola",
-            "image": null
+            "image": "https://unsplash.it/300/300?image=27"
         },
         "likes": 56,
         "created": "2021-04-03"
@@ -94,21 +94,22 @@ const newPost = document.getElementById("container")
 })*/
 
 for(let i = 0; i<posts.length; i++){
-    newPost.innerHTML += generateNewPost();
-
-   
-    
+    newPost.innerHTML += generateNewPost(i);
 }
 
+generateNewPost(i)
 
 
 
-generateNewPost()
+
+
+
+
+
+
 /* FUNZIONI */
 
-function generateNewPost(){
-    let i=0
-
+function generateNewPost(i){
     return`
 
     <div class="post">
