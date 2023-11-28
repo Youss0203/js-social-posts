@@ -87,9 +87,18 @@ const posts = [
 const newPost = document.getElementById("container")
 
 
-posts.forEach((posts) => {
+/*posts.forEach((posts) => {
     newPost.innerHTML += generateNewPost();
-})
+
+    
+})*/
+
+for(let i = 0; i<posts.length; i++){
+    newPost.innerHTML += generateNewPost();
+
+   
+    
+}
 
 
 
@@ -99,6 +108,7 @@ generateNewPost()
 
 function generateNewPost(){
     let i=0
+
     return`
 
     <div class="post">
@@ -126,12 +136,13 @@ function generateNewPost(){
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone 
+                        Piace a <b id="like-counter-1" class="js-likes-counter">${posts[i].likes}</b> persone 
                     </div>
                 </div> 
             </div>            
         </div>
         `
+        
 
 }
 
