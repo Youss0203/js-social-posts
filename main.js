@@ -87,6 +87,10 @@ const posts = [
 const newPost = document.getElementById("container")
 
 
+posts.forEach((posts) => {
+    newPost.innerHTML += generateNewPost();
+})
+
 
 
 
@@ -95,7 +99,7 @@ generateNewPost()
 
 function generateNewPost(){
     let i=0
-    newPost.innerHTML +=`
+    return`
 
     <div class="post">
             <div class="post__header">
