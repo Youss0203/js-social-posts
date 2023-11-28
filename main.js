@@ -87,12 +87,12 @@ const posts = [
 const newPost = document.getElementById("container")
 
 
-
+generateNewPost()
 /* FUNZIONI */
 
 function generateNewPost(){
 
-    innerHTML +=`
+    newPost.innerHTML +=`
 
     <div class="post">
             <div class="post__header">
