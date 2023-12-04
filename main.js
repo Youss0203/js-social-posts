@@ -97,11 +97,29 @@ for(let i = 0; i<posts.length; i++){
     newPost.innerHTML += generateNewPost(i);
 }
 
-generateNewPost(i)
+generateNewPost()
 
 
+const likeButtonsList = newPost.querySelectorAll('a.like-button.js-like-button');
+const likeCountersList = newPost.querySelectorAll('strong.js-likes-counter');
 
+for (let index = 0; index < likeButtonsList.length; index++) {
 
+    const currentLikeButton = likeButtonsList[index];
+    currentLikeButton.addEventListener('click', function( event ){
+        event.preventDefault();
+
+        if (currentLikeButton.classList.contains('.like-button--liked')){
+            currentLikeButton.classList.remove('.like-button--liked');
+            likeCountersList[index].innerHTML = parseInt(likeCountersList[index].innerHTML, 10) - 1;
+        } else {
+            currentLikeButton.classList.add('.like-button--liked');
+            likeCountersList[index].innerHTML = parseInt(likeCountersList[index].innerHTML, 10) + 1;
+        }
+    });
+}
+
+ 
 
 
 
